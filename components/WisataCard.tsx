@@ -1,0 +1,60 @@
+import { Button } from "@/components/ui/button";
+
+interface WisataCardProps {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  mapUrl?: string;
+}
+
+export function WisataCard({
+  title,
+  description,
+  imageUrl,
+  mapUrl,
+}: WisataCardProps) {
+  return (
+    <div className="flex flex-col w-full font-sans group">
+      {/* Image Placeholder / Image */}
+      <div className="w-full aspect-[3/2] bg-[#d9d9d9] rounded-[2rem] overflow-hidden mb-6 relative">
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col flex-1 px-2">
+        <h3 className="text-[2rem] font-bold leading-tight mb-4 text-black">
+          {title}
+        </h3>
+
+        <p className="text-[#3a3a3a] text-base leading-relaxed mb-8 font-medium flex-1">
+          {description}
+        </p>
+
+        {mapUrl ? (
+          <a href={mapUrl} target="_blank" rel="noopener noreferrer">
+            <Button 
+              size="lg"
+              className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+            >
+              Lihat Lokasi
+            </Button>
+          </a>
+        ) : (
+          <Button 
+            size="lg"
+            disabled
+            className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm opacity-50 cursor-not-allowed"
+          >
+            Lokasi Belum Tersedia
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+}

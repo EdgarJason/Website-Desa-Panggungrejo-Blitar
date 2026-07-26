@@ -46,6 +46,24 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Panggungrejo Brand Colors */
+  --color-brand-light: #f1eeed;
+  --color-brand-light-hover: #eae6e4;
+  --color-brand-light-active: #d4cbc8;
+  --color-brand-normal: #75584d;
+  --color-brand-normal-hover: #694f45;
+  --color-brand-normal-active: #5e463e;
+  --color-brand-dark: #58423a;
+  --color-brand-dark-hover: #46352e;
+  --color-brand-dark-active: #352823;
+  --color-brand-darker: #291f1b;
+
+  --animate-marquee: marquee 25s linear infinite;
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.5rem)); }
+  }
 }
 
 :root {
