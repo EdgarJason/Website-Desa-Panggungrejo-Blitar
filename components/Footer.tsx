@@ -24,7 +24,7 @@ const YoutubeIcon = (props: any) => (
 
 export function Footer() {
   return (
-    <footer id="kontak" className="bg-brand-normal text-white rounded-t-[3rem] px-8 py-12 md:px-16 md:py-16 mt-auto">
+    <footer id="kontak" className="bg-brand-normal text-white rounded-t-[2rem] md:rounded-t-[3rem] px-8 py-12 md:px-16 md:py-16 mt-auto">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
         {/* Left Side */}
         <div className="flex flex-col justify-between">

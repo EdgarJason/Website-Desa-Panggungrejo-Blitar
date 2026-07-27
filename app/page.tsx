@@ -16,7 +16,7 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col min-h-screen bg-white font-sans text-black w-full">
-      <section id="hero" className="relative flex flex-col items-start justify-end min-h-screen overflow-hidden">
+      <section id="hero" className="relative flex flex-col items-start justify-end min-h-[100svh] overflow-hidden">
         <video 
           autoPlay 
           loop 
@@ -45,7 +45,7 @@ export default async function Home() {
       <section id="tentang" className="flex flex-col w-full">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 mb-16">
           <div className="md:w-5/12">
-            <h2 className="text-6xl font-bold leading-[1.1] text-[#1c1c1c]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1c1c1c]">
               Tentang<br />Panggungrejo
             </h2>
           </div>
@@ -93,7 +93,7 @@ export default async function Home() {
 
       <section id="sejarah" className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
-          <h1 className="text-6xl font-bold">Sejarah Panggungrejo</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Sejarah Panggungrejo</h1>
           <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false'/>
         </div>
 
@@ -108,7 +108,7 @@ export default async function Home() {
          </section>
 
       <section id="wisata" className="flex flex-col gap-10">
-        <h1 className="text-5xl lg:text-6xl font-bold">Wisata Unggulan Panggungrejo</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Wisata Unggulan Panggungrejo</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
           <WisataCard 
@@ -201,12 +201,12 @@ export default async function Home() {
         />
         
         {/* Card Container */}
-        <div className="relative z-10 flex flex-col items-center justify-center gap-8 p-10 md:p-16 bg-brand-light/65 backdrop-blur-md rounded-[2.5rem] text-center max-w-4xl w-full border border-white/20">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-8 p-8 md:p-16 bg-brand-light/65 backdrop-blur-md rounded-[2.5rem] text-center max-w-4xl w-full border border-white/20">
           <div className="flex flex-col items-center justify-center gap-4">       
-            <h1 className="text-4xl md:text-6xl font-bold text-brand-dark leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark leading-tight">
               Siap Mengeksplorasi<br/>Panggungrejo?
             </h1>
-            <p className="text-lg md:text-2xl text-gray-800 font-medium">
+            <p className="text-base sm:text-lg md:text-2xl text-gray-800 font-medium">
               Nantikan pengalaman menyenangkan bersama kami!
             </p>
           </div>
