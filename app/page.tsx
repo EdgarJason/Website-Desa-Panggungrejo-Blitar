@@ -127,9 +127,9 @@ export default async function Home() {
       </section>
 
       <section id="umkm" className="flex flex-col gap-10">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 w-full">
           <div className="flex flex-col gap-4">
-            <h1 className="text-5xl lg:text-6xl font-bold whitespace-nowrap">UMKM Desa Panggungrejo</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">UMKM Desa Panggungrejo</h1>
             <p className="text-lg font-normal text-zinc-700 max-w-2xl">UMKM yang menjadi tulang punggung ekonomi Desa Panggungrejo dan menyediakan kebutuhan masyarakat.</p>
           </div>
           <div className="flex-shrink-0">
@@ -139,7 +139,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-14 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 w-full">
           {umkmData.map((item) => (
             <UmkmCard 
               key={item.id}
@@ -161,9 +161,9 @@ export default async function Home() {
       </section>
 
       <section id="berita" className="flex flex-col gap-10">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 w-full">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 w-full">
           <div className="flex flex-col gap-4">
-            <h1 className="text-5xl lg:text-6xl font-bold whitespace-nowrap">Berita / Kegiatan Panggungrejo</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Berita / Kegiatan Panggungrejo</h1>
             <p className="text-lg font-normal text-zinc-700 max-w-2xl">Informasi terkini mengenai kegiatan dan acara yang diadakan di Desa Panggungrejo.</p>
           </div>
           <div className="flex-shrink-0">

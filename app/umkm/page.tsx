@@ -24,7 +24,7 @@ export default async function UMKMPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-14 max-w-7xl mx-auto w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 max-w-7xl mx-auto w-full">
         {umkm?.map((item) => (
           <UmkmCard
             key={item.id}

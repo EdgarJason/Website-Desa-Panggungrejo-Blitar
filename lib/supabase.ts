@@ -1,6 +1,5 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient as createBrowserClient } from "@/utils/supabase/client";
 
-export const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
-);
+// Export the browser client instance to maintain compatibility
+// with existing client components that use `supabase` directly.
+export const supabase = createBrowserClient();

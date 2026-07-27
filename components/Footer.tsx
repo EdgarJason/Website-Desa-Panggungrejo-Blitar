@@ -33,7 +33,8 @@ export function Footer() {
             <p className="text-xl md:text-2xl text-white/80">Kab. Blitar</p>
           </div>
           
-          <div className="flex items-center gap-3 mt-12 md:mt-24 text-sm text-white/80">
+          {/* Made by DDM (Desktop only - hidden on mobile) */}
+          <div className="hidden md:flex items-center gap-3 mt-12 md:mt-24 text-sm text-white/80">
             <img src="/logommd.png" alt="Logo MMD 57" className="w-8 h-8 object-contain" />
             <p>Made by DDM MMD 57 FILKOM UB 2026</p>
           </div>
@@ -73,6 +74,14 @@ export function Footer() {
             <Link href="/admin/berita" target="_blank" rel="noopener noreferrer" className="hidden md:block text-xs font-normal opacity-50 hover:opacity-100 underline transition-opacity mt-4">
               Akses Admin
             </Link>
+          </div>
+        </div>
+
+        {/* Made by DDM (Mobile only - visible at bottom) */}
+        <div className="flex md:hidden flex-col items-center gap-3 mt-4 pt-8 border-t border-white/20 text-sm text-white/80">
+          <div className="flex items-center gap-3">
+            <img src="/logommd.png" alt="Logo MMD 57" className="w-8 h-8 object-contain" />
+            <p>Made by DDM MMD 57 FILKOM UB 2026</p>
           </div>
         </div>
       </div>

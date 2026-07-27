@@ -1,47 +1,39 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { login } from "@/lib/auth";
-import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+import { loginAction } from "./actions";
 
 export default function AdminLoginPage() {
-  // If already logged in, redirect to dashboard
-  useAuth({
-    redirectIfUnauthenticated: false,
-    redirectIfAuthenticated: true,
-  });
-
   const router = useRouter();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    if (!username.trim() || !password.trim()) {
-      setError("Username dan password harus diisi.");
+    if (!email.trim() || !password.trim()) {
+      setError("Email dan password harus diisi.");
       return;
     }
 
-    setIsSubmitting(true);
+    startTransition(async () => {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("password", password);
 
-    try {
-      const success = await login(username.trim(), password);
-      if (success) {
-        router.replace("/admin/dashboard");
-      } else {
-        setError("Username atau password salah.");
+      const result = await loginAction(formData);
+
+      if (result?.error) {
+        setError(result.error);
+      } else if (result?.success) {
+        router.push("/admin/dashboard");
       }
-    } catch {
-      setError("Terjadi kesalahan. Silakan coba lagi.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -64,7 +56,7 @@ export default function AdminLoginPage() {
               Login Admin
             </h2>
             <p className="text-gray-500 mt-1 text-sm">
-              Masukkan kredensial untuk mengakses panel admin.
+              Masukkan email dan password untuk mengakses panel admin.
             </p>
           </div>
 
@@ -79,21 +71,21 @@ export default function AdminLoginPage() {
               </div>
             )}
 
-            {/* Username */}
+            {/* Email */}
             <div className="space-y-2">
               <label
-                htmlFor="username"
+                htmlFor="email"
                 className="block text-sm font-semibold text-gray-700"
               >
-                Username
+                Email
               </label>
               <input
-                id="username"
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Masukkan username"
-                autoComplete="username"
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="admin@panggungrejo.id"
+                autoComplete="email"
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50/50 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-normal/30 focus:border-brand-normal transition-all"
               />
             </div>
@@ -121,10 +113,10 @@ export default function AdminLoginPage() {
             <Button
               type="submit"
               size="lg"
-              disabled={isSubmitting}
+              disabled={isPending}
               className="w-full rounded-xl font-semibold text-base h-12 mt-2"
             >
-              {isSubmitting ? (
+              {isPending ? (
                 <span className="flex items-center gap-2">
                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   Masuk...
