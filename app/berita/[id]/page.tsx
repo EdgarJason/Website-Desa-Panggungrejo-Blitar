@@ -4,8 +4,41 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
+import type { Metadata, ResolvingMetadata } from "next";
 
 export const revalidate = 0;
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const resolvedParams = await params;
+  
+  const { data: berita } = await supabase
+    .from("berita")
+    .select("*")
+    .eq("id", resolvedParams.id)
+    .single();
+
+  if (!berita) {
+    return {
+      title: "Berita Tidak Ditemukan",
+    };
+  }
+
+  // Create a plain text description from content
+  const description = berita.konten ? berita.konten.substring(0, 160).replace(/\n/g, ' ') + '...' : "";
+
+  return {
+    title: berita.headline,
+    description: description,
+    openGraph: {
+      title: berita.headline,
+      description: description,
+      images: berita.foto ? [berita.foto] : [],
+    },
+  };
+}
 
 export default async function BeritaDetail({
   params,

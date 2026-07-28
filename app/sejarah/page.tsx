@@ -2,6 +2,12 @@ import { buttonVariants } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sejarah",
+  description: "Sejarah Desa Panggungrejo, dari legenda Mbah Gadung Melati hingga berdirinya desa pada tahun 1891.",
+};
 
 export default function Sejarah() {
   return (

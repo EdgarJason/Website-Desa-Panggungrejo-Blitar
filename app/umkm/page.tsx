@@ -2,6 +2,12 @@ import { UmkmGrid } from "@/components/UmkmGrid";
 import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "UMKM",
+  description: "Daftar UMKM dan potensi ekonomi lokal di Desa Panggungrejo, Kabupaten Blitar.",
+};
 
 export const revalidate = 0;
 

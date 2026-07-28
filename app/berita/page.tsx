@@ -2,6 +2,12 @@ import { BeritaGrid } from "@/components/BeritaGrid";
 import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Berita & Kegiatan",
+  description: "Kumpulan berita, kegiatan, dan pengumuman terbaru dari Desa Panggungrejo.",
+};
 
 export const revalidate = 0;
 

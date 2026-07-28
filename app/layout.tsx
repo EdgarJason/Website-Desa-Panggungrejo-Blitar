@@ -20,8 +20,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Desa Panggungrejo - Kab. Blitar",
-  description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur.",
+  metadataBase: new URL("https://desapanggungrejoblitar.vercel.app"),
+  title: {
+    default: "Desa Panggungrejo - Kab. Blitar",
+    template: "%s | Desa Panggungrejo",
+  },
+  description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur. Pusat informasi kegiatan, wisata, UMKM, dan sejarah desa.",
+  keywords: ["Panggungrejo", "Desa Panggungrejo", "Blitar", "Wisata Blitar", "UMKM Panggungrejo", "Jawa Timur"],
+  openGraph: {
+    title: "Desa Panggungrejo - Kab. Blitar",
+    description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur.",
+    url: "https://desapanggungrejoblitar.vercel.app",
+    siteName: "Desa Panggungrejo",
+    locale: "id_ID",
+    type: "website",
+    images: [
+      {
+        url: "/herothumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Desa Panggungrejo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Desa Panggungrejo - Kab. Blitar",
+    description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur.",
+    images: ["/herothumbnail.png"],
+  },
 };
 
 export default function RootLayout({
