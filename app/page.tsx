@@ -8,7 +8,7 @@ import Link from "next/link";
 export default async function Home() {
   const [umkmRes, beritaRes] = await Promise.all([
     supabase.from("umkm").select("*").order("id", { ascending: true }).limit(8),
-    supabase.from("berita").select("*").order("created_at", { ascending: false }).limit(3),
+    supabase.from("berita").select("*").order("date", { ascending: false }).limit(3),
   ]);
 
   const umkmData = umkmRes.data ?? [];
@@ -182,7 +182,7 @@ export default async function Home() {
               headline={item.headline}
               konten={item.konten}
               foto={item.foto}
-              createdAt={item.created_at}
+              createdAt={item.date}
             />
           ))}
         </div>

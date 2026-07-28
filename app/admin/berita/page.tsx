@@ -47,6 +47,7 @@ export default function AdminBeritaPage() {
         headline: formData.headline,
         konten: formData.konten,
         foto: fotoUrl,
+        date: formData.date,
       });
       await loadData();
       setShowForm(false);
@@ -72,6 +73,7 @@ export default function AdminBeritaPage() {
       await updateBerita(editItem.id, {
         headline: formData.headline,
         konten: formData.konten,
+        date: formData.date,
         ...(fotoUrl !== undefined ? { foto: fotoUrl } : {}),
       });
       await loadData();
@@ -171,7 +173,7 @@ export default function AdminBeritaPage() {
                       )}
                     </td>
                     <td className="px-6 py-4 font-semibold text-gray-900">{item.headline}</td>
-                    <td className="px-6 py-4 text-gray-500 whitespace-nowrap">{formatDate(item.created_at)}</td>
+                    <td className="px-6 py-4 text-gray-500 whitespace-nowrap">{formatDate(item.date)}</td>
                     <td className="px-6 py-4 text-gray-500 max-w-xs truncate">{item.konten}</td>
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-center gap-2">

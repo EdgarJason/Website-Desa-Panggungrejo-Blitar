@@ -7,7 +7,7 @@ export default async function BeritaPage() {
   const { data: berita, error } = await supabase
     .from("berita")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("date", { ascending: false });
 
   if (error) {
     return <p className="p-10 text-red-500">Error: {error.message}</p>;
@@ -32,7 +32,7 @@ export default async function BeritaPage() {
             headline={item.headline}
             konten={item.konten}
             foto={item.foto}
-            createdAt={item.created_at}
+            createdAt={item.date}
           />
         ))}
       </div>

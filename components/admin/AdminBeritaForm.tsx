@@ -7,6 +7,7 @@ import type { Berita } from "@/lib/data/berita";
 export interface BeritaFormData {
   headline: string;
   konten: string;
+  date: string;
   fotoFile?: File | null;
   existingFoto?: string | null;
   isFotoRemoved: boolean;
@@ -30,6 +31,7 @@ export function AdminBeritaForm({
 
   const [headline, setHeadline] = useState("");
   const [konten, setKonten] = useState("");
+  const [date, setDate] = useState(() => new Date().toISOString().split("T")[0]);
   const [fotoFile, setFotoFile] = useState<File | null>(null);
   const [fotoPreview, setFotoPreview] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -38,6 +40,7 @@ export function AdminBeritaForm({
     if (berita) {
       setHeadline(berita.headline);
       setKonten(berita.konten);
+      if (berita.date) setDate(berita.date);
       if (berita.foto) {
         setFotoPreview(berita.foto);
       }
@@ -87,6 +90,7 @@ export function AdminBeritaForm({
     const newErrors: Record<string, string> = {};
     if (!headline.trim()) newErrors.headline = "Judul berita wajib diisi.";
     if (!konten.trim()) newErrors.konten = "Konten wajib diisi.";
+    if (!date) newErrors.date = "Tanggal wajib diisi.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -98,6 +102,7 @@ export function AdminBeritaForm({
     onSubmit({
       headline: headline.trim(),
       konten: konten.trim(),
+      date,
       fotoFile,
       existingFoto: berita?.foto || null,
       isFotoRemoved: !fotoPreview && !fotoFile,
@@ -140,6 +145,23 @@ export function AdminBeritaForm({
             />
             {errors.headline && (
               <p className="text-xs text-red-500 font-medium">{errors.headline}</p>
+            )}
+          </div>
+
+          {/* Tanggal */}
+          <div className="space-y-1.5">
+            <label htmlFor="berita-date" className="block text-sm font-semibold text-gray-700">
+              Tanggal <span className="text-red-500">*</span>
+            </label>
+            <input
+              id="berita-date"
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-gray-50/50 text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-normal/30 focus:border-brand-normal transition-all"
+            />
+            {errors.date && (
+              <p className="text-xs text-red-500 font-medium">{errors.date}</p>
             )}
           </div>
 

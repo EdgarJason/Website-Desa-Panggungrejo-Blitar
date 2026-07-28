@@ -9,6 +9,7 @@ export interface Berita {
   headline: string;
   konten: string;
   foto: string | null;
+  date: string;
   created_at: string;
 }
 
@@ -16,6 +17,7 @@ export type BeritaInput = {
   headline: string;
   konten: string;
   foto?: string | null;
+  date: string;
 };
 
 /**
@@ -57,7 +59,7 @@ export async function getBerita(): Promise<Berita[]> {
   const { data, error } = await supabase
     .from("berita")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("date", { ascending: false });
 
   if (error) throw new Error(error.message);
   return data ?? [];
@@ -87,6 +89,7 @@ export async function addBerita(input: BeritaInput): Promise<Berita> {
       headline: input.headline,
       konten: input.konten,
       foto: input.foto || null,
+      date: input.date,
     })
     .select()
     .single();
@@ -106,6 +109,7 @@ export async function updateBerita(
   if (input.headline !== undefined) updateData.headline = input.headline;
   if (input.konten !== undefined) updateData.konten = input.konten;
   if (input.foto !== undefined) updateData.foto = input.foto || null;
+  if (input.date !== undefined) updateData.date = input.date;
 
   const { data, error } = await supabase
     .from("berita")

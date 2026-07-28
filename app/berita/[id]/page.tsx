@@ -47,7 +47,7 @@ export default async function BeritaDetail({
               {berita.headline}
             </h1>
             <p className="text-zinc-500 font-medium text-sm md:text-base">
-              Dipublikasikan pada {formatDate(berita.created_at)}
+              Dipublikasikan pada {formatDate(berita.date)}
             </p>
           </div>
         </div>
