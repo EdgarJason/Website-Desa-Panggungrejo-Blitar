@@ -16,7 +16,7 @@ export function WisataCard({
   return (
     <div className="flex flex-col h-full w-full font-sans group">
       {/* Image Placeholder / Image */}
-      <div className="w-full aspect-[3/2] bg-[#d9d9d9] rounded-[2rem] overflow-hidden mb-6 relative">
+      <div className="w-full aspect-[3/2] bg-[#d9d9d9] rounded-2xl md:rounded-[2rem] overflow-hidden mb-6 relative">
         {imageUrl && (
           <img
             src={imageUrl}

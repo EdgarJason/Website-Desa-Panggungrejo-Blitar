@@ -32,7 +32,7 @@ export function BeritaCard({
   return (
     <Link href={`/berita/${id}`} className="flex flex-col w-full font-sans group cursor-pointer block">
       {/* Image */}
-      <div className="w-full aspect-[16/9] bg-[#d9d9d9] rounded-[2rem] overflow-hidden mb-6 relative">
+      <div className="w-full aspect-[16/9] bg-[#d9d9d9] rounded-2xl md:rounded-[2rem] overflow-hidden mb-6 relative">
         {foto && (
           <img
             src={foto}

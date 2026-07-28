@@ -1,7 +1,7 @@
 import { Button, buttonVariants } from "@/components/ui/button"
-import { UmkmCard } from "@/components/UmkmCard";
 import { WisataCard } from "@/components/WisataCard";
-import { BeritaCard } from "@/components/BeritaCard";
+import { LandingUmkmGrid } from "@/components/LandingUmkmGrid";
+import { LandingBeritaGrid } from "@/components/LandingBeritaGrid";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
@@ -81,7 +81,7 @@ export default async function Home() {
         <p className="text-base font-bold text-brand-normal uppercase tracking-widest text-center">
           Profile Desa Panggungrejo, Kab. Blitar
         </p>
-        <div className="w-full aspect-video bg-gray-100 rounded-[2rem] border border-gray-200 flex items-center justify-center shadow-sm relative overflow-hidden group cursor-pointer">
+        <div className="w-full aspect-video bg-gray-100 rounded-2xl md:rounded-[2rem] border border-gray-200 flex items-center justify-center shadow-sm relative overflow-hidden group cursor-pointer">
           <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors" />
           
           <div className="w-20 h-20 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
@@ -97,7 +97,7 @@ export default async function Home() {
       <section id="sejarah" className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Sejarah Panggungrejo</h1>
-          <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false'/>
+          <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false' className="w-full h-auto sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"/>
         </div>
 
         <p className="text-lg font-normal">
@@ -142,19 +142,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 w-full">
-          {umkmData.map((item) => (
-            <UmkmCard 
-              key={item.id}
-              nama={item.nama}
-              pemilik={item.pemilik}
-              telp={item.telp}
-              deskripsi={item.deskripsi}
-              foto={item.foto}
-              lokasi={item.lokasi}
-            />
-          ))}
-        </div>
+        <LandingUmkmGrid data={umkmData} />
 
         <div className="flex justify-center">
           <a href="/umkm" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
@@ -176,18 +164,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {beritaData.map((item) => (
-            <BeritaCard 
-              key={item.id}
-              id={item.id}
-              headline={item.headline}
-              konten={item.konten}
-              foto={item.foto}
-              createdAt={item.date}
-            />
-          ))}
-        </div>
+        <LandingBeritaGrid data={beritaData} />
 
         <div className="flex justify-center">
           <Link href="/berita" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
@@ -196,7 +173,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="relative flex flex-col justify-center items-center py-20 px-6 md:p-24 rounded-[3rem] overflow-hidden shadow-sm">
+      <section className="relative flex flex-col justify-center items-center py-20 px-6 md:p-24 rounded-2xl md:rounded-[3rem] overflow-hidden shadow-sm">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center hover:scale-105 transition-transform duration-1000"
@@ -204,7 +181,7 @@ export default async function Home() {
         />
         
         {/* Card Container */}
-        <div className="relative z-10 flex flex-col items-center justify-center gap-8 p-8 md:p-16 bg-brand-light/65 backdrop-blur-md rounded-[2.5rem] text-center max-w-4xl w-full border border-white/20">
+        <div className="relative z-10 flex flex-col items-center justify-center gap-8 p-8 md:p-16 bg-brand-light/65 backdrop-blur-md rounded-2xl md:rounded-[2.5rem] text-center max-w-4xl w-full border border-white/20">
           <div className="flex flex-col items-center justify-center gap-4">       
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark leading-tight">
               Siap Mengeksplorasi<br/>Panggungrejo?

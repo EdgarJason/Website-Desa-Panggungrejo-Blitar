@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 import { AdminUmkmForm, type UmkmFormData } from "@/components/admin/AdminUmkmForm";
 import {
   getUmkm,
@@ -19,6 +20,7 @@ export default function AdminUmkmPage() {
   const [editItem, setEditItem] = useState<Umkm | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const loadData = useCallback(async () => {
     try {
@@ -101,6 +103,16 @@ export default function AdminUmkmPage() {
     }
   };
 
+  const filteredData = useMemo(() => {
+    if (!searchQuery.trim()) return data;
+    const lowerQuery = searchQuery.toLowerCase();
+    return data.filter((item) => 
+      item.nama.toLowerCase().includes(lowerQuery) ||
+      item.pemilik.toLowerCase().includes(lowerQuery) ||
+      item.deskripsi.toLowerCase().includes(lowerQuery)
+    );
+  }, [data, searchQuery]);
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -115,6 +127,20 @@ export default function AdminUmkmPage() {
           </svg>
           Tambah UMKM
         </Button>
+      </div>
+
+      {/* Search & Actions */}
+      <div className="flex items-center gap-4">
+        <div className="relative flex-1 max-w-md">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Cari UMKM berdasarkan nama, pemilik, atau deskripsi..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-normal/30 focus:border-brand-normal transition-all"
+          />
+        </div>
       </div>
 
       {/* Table */}
@@ -145,7 +171,7 @@ export default function AdminUmkmPage() {
                 </tr>
               </thead>
               <tbody>
-                {data.map((item, index) => (
+                {filteredData.map((item, index) => (
                   <tr key={item.id} className="border-b border-gray-50 hover:bg-gray-50/50 transition-colors">
                     <td className="px-6 py-4 text-gray-500">{index + 1}</td>
                     <td className="px-6 py-4">

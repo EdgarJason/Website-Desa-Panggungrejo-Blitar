@@ -1,4 +1,4 @@
-import { BeritaCard } from "@/components/BeritaCard";
+import { BeritaGrid } from "@/components/BeritaGrid";
 import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
@@ -26,18 +26,7 @@ export default async function BeritaPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto w-full">
-        {berita?.map((item) => (
-          <BeritaCard
-            key={item.id}
-            id={item.id}
-            headline={item.headline}
-            konten={item.konten}
-            foto={item.foto}
-            createdAt={item.date}
-          />
-        ))}
-      </div>
+      <BeritaGrid data={berita ?? []} />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { UmkmCard } from "@/components/UmkmCard";
+import { UmkmGrid } from "@/components/UmkmGrid";
 import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
@@ -26,19 +26,7 @@ export default async function UMKMPage() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 max-w-7xl mx-auto w-full">
-        {umkm?.map((item) => (
-          <UmkmCard
-            key={item.id}
-            nama={item.nama}
-            pemilik={item.pemilik}
-            telp={item.telp}
-            deskripsi={item.deskripsi}
-            foto={item.foto}
-            lokasi={item.lokasi}
-          />
-        ))}
-      </div>
+      <UmkmGrid data={umkm ?? []} />
     </main>
   );
 }
