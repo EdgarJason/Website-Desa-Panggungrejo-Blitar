@@ -22,6 +22,7 @@ export default async function Home() {
           loop 
           muted 
           playsInline 
+          preload='auto'
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src="/hero.mp4" type="video/mp4" />
@@ -32,8 +33,8 @@ export default async function Home() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
             Desa Panggungrejo
           </h1>
-          <p className="font-medium text-xl md:text-2xl italic mb-6 drop-shadow-md text-zinc-100">
-            Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur
+          <p className="font-normal text-sm md:text-lg mb-6 drop-shadow-md text-zinc-100">
+            Kecamatan Panggungrejo · Kabupaten Blitar · Jawa Timur
           </p>
           <p className="font-normal text-sm md:text-xl text-zinc-200 drop-shadow-md max-w-3xl">
             Di balik hamparan alam yang asri, Panggungrejo menghadirkan kopi pilihan, hasil bumi berkualitas, dan UMKM lokal yang tumbuh bersama masyarakatnya.
@@ -50,7 +51,7 @@ export default async function Home() {
             </h2>
           </div>
           <div className="md:w-7/12 flex items-center">
-            <p className="text-lg text-[#404040] leading-[1.75] font-medium">
+            <p className="text-lg text-[#404040] leading-[1.75] font-regular">
               Desa Panggungrejo adalah pusat pemerintahan Kecamatan Panggungrejo, Kabupaten Blitar, sekaligus gerbang menuju berbagai destinasi wisata unggulan di Blitar Selatan. Didukung oleh potensi UMKM lokal seperti kopi robusta dan berbagai produk olahan, desa ini terus berkembang sebagai pusat pelayanan, pariwisata, dan ekonomi masyarakat.
             </p>
           </div>
@@ -58,7 +59,7 @@ export default async function Home() {
         
         <div className="flex flex-col md:flex-row w-full gap-6">
           <div className="w-full md:w-1/3 bg-brand-light hover:bg-brand-light-hover rounded-3xl py-12 px-6 text-center flex flex-col items-center justify-center transition-all hover:scale-[1.02] duration-300 cursor-pointer">
-            <h3 className="text-[2.5rem] font-bold text-brand-dark mb-3">8.000+</h3>
+            <h3 className="text-[2.5rem] font-bold text-brand-dark mb-3">8.254</h3>
             <p className="text-brand-normal font-bold tracking-widest text-base uppercase">Populasi</p>
           </div>
           
@@ -76,7 +77,7 @@ export default async function Home() {
 
       <section className="flex flex-col w-full gap-5">
         <p className="text-base font-bold text-brand-normal uppercase tracking-widest text-center">
-          Simak Profile Desa Panggungrejo, Kab. Blitar!
+          Profile Desa Panggungrejo, Kab. Blitar
         </p>
         <div className="w-full aspect-video bg-gray-100 rounded-[2rem] border border-gray-200 flex items-center justify-center shadow-sm relative overflow-hidden group cursor-pointer">
           <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors" />

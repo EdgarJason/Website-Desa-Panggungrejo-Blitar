@@ -64,12 +64,14 @@ export function Footer() {
           {/* Navigasi Section */}
           <div className="flex flex-col gap-4 items-start md:items-end">
             <h3 className="text-xl font-semibold">Navigasi</h3>
-            <nav className="flex flex-wrap gap-4 md:gap-6 font-medium">
-              <Link href="/" className="hover:text-white/80 transition-colors">Home</Link>
-              <Link href="/tentang" className="hover:text-white/80 transition-colors">Tentang</Link>
-              <Link href="/wisata" className="hover:text-white/80 transition-colors">Wisata</Link>
-              <Link href="/umkm" className="hover:text-white/80 transition-colors">UMKM</Link>
-              <Link href="/kontak" className="hover:text-white/80 transition-colors">Kontak</Link>
+            <nav className="flex flex-wrap gap-4 md:gap-6 font-regular">
+              <Link href="/#hero" className="hover:text-white/80 transition-colors">Home</Link>
+              <Link href="/#tentang" className="hover:text-white/80 transition-colors">Tentang</Link>
+              <Link href="/#sejarah" className="hover:text-white/80 transition-colors">Sejarah</Link>
+              <Link href="/#wisata" className="hover:text-white/80 transition-colors">Wisata</Link>
+              <Link href="/#umkm" className="hover:text-white/80 transition-colors">UMKM</Link>
+              <Link href="/#berita" className="hover:text-white/80 transition-colors">Berita</Link>
+              <Link href="#kontak" className="hover:text-white/80 transition-colors">Kontak</Link>
             </nav>
             <Link href="/admin/berita" target="_blank" rel="noopener noreferrer" className="hidden md:block text-xs font-normal opacity-50 hover:opacity-100 underline transition-opacity mt-4">
               Akses Admin
