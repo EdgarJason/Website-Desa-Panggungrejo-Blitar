@@ -3,6 +3,8 @@ import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default async function UMKMPage() {
   const { data: umkm, error } = await supabase
     .from("umkm")

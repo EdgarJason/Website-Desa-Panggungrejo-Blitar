@@ -4,6 +4,8 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
+export const revalidate = 0;
+
 export default async function BeritaDetail({
   params,
 }: {

@@ -5,6 +5,8 @@ import { BeritaCard } from "@/components/BeritaCard";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default async function Home() {
   const [umkmRes, beritaRes] = await Promise.all([
     supabase.from("umkm").select("*").order("id", { ascending: true }).limit(8),

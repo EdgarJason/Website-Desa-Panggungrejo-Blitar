@@ -3,6 +3,8 @@ import { supabase } from "@/lib/supabase";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default async function BeritaPage() {
   const { data: berita, error } = await supabase
     .from("berita")
