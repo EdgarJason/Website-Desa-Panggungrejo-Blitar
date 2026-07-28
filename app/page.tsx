@@ -97,7 +97,7 @@ export default async function Home() {
       <section id="sejarah" className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Sejarah Panggungrejo</h1>
-          <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false' className="w-full h-auto sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"/>
+          <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false' className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"/>
         </div>
 
         <p className="text-lg font-normal">
