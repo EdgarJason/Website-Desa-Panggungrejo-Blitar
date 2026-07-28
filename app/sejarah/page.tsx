@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Sejarah() {
   return (
@@ -14,10 +15,13 @@ export default function Sejarah() {
             Sejarah Desa Panggungrejo
           </h1>
         </div>
-        <img
+        <Image
           src="/fotosejarah.png"
           alt="Foto Kantor Desa Panggungrejo"
-          draggable="false"
+          width={1200}
+          height={800}
+          draggable={false}
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"
         />
       </section>
 

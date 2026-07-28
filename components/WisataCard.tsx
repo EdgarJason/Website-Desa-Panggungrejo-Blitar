@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
+import Image from "next/image";
 
 interface WisataCardProps {
   title: string;
@@ -18,10 +20,12 @@ export function WisataCard({
       {/* Image Placeholder / Image */}
       <div className="w-full aspect-[3/2] bg-[#d9d9d9] rounded-2xl md:rounded-[2rem] overflow-hidden mb-6 relative">
         {imageUrl && (
-          <img
+          <Image
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         )}
       </div>

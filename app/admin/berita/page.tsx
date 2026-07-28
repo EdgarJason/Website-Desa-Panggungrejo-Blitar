@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import { AdminBeritaForm, type BeritaFormData } from "@/components/admin/AdminBeritaForm";
 import {
   getBerita,
@@ -192,7 +193,7 @@ export default function AdminBeritaPage() {
                     <td className="px-6 py-4 text-gray-500">{index + 1}</td>
                     <td className="px-6 py-4">
                       {item.foto ? (
-                        <img src={item.foto} alt="" className="w-10 h-10 rounded-lg object-cover" />
+                        <Image src={item.foto} alt="" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
                       ) : (
                         <div className="w-10 h-10 rounded-lg bg-gray-100" />
                       )}

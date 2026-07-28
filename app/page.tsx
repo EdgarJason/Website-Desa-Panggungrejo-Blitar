@@ -4,6 +4,7 @@ import { LandingUmkmGrid } from "@/components/LandingUmkmGrid";
 import { LandingBeritaGrid } from "@/components/LandingBeritaGrid";
 import { supabase } from "@/lib/supabase";
 import Link from "next/link";
+import Image from "next/image";
 
 export const revalidate = 0;
 
@@ -25,8 +26,10 @@ export default async function Home() {
           muted 
           playsInline 
           preload='auto'
+          poster="/herothumbnail.png"
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
+          <source src="/herowebm.webm" type="video/webm" />
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
@@ -97,7 +100,7 @@ export default async function Home() {
       <section id="sejarah" className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Sejarah Panggungrejo</h1>
-          <img src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" draggable='false' className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"/>
+          <Image src="/fotosejarah.png" alt="Foto Kantor Desa Panggungrejo" width={1200} height={800} draggable={false} className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"/>
         </div>
 
         <p className="text-lg font-normal">

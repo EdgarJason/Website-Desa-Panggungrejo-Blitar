@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 
 const InstagramIcon = (props: any) => (
@@ -35,7 +36,7 @@ export function Footer() {
           
           {/* Made by DDM (Desktop only - hidden on mobile) */}
           <div className="hidden md:flex items-center gap-3 mt-12 md:mt-24 text-sm text-white/80">
-            <img src="/logommd.png" alt="Logo MMD 57" className="w-8 h-8 object-contain" />
+            <Image src="/logommd.png" alt="Logo MMD 57" width={32} height={32} className="object-contain" />
             <p>Made by DDM MMD 57 FILKOM UB 2026</p>
           </div>
         </div>
@@ -82,7 +83,7 @@ export function Footer() {
         {/* Made by DDM (Mobile only - visible at bottom) */}
         <div className="flex md:hidden flex-col items-center gap-3 mt-4 pt-8 border-t border-white/20 text-sm text-white/80">
           <div className="flex items-center gap-3">
-            <img src="/logommd.png" alt="Logo MMD 57" className="w-8 h-8 object-contain" />
+            <Image src="/logommd.png" alt="Logo MMD 57" width={32} height={32} className="object-contain" />
             <p>Made by DDM MMD 57 FILKOM UB 2026</p>
           </div>
         </div>

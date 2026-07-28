@@ -1,4 +1,5 @@
 import { Calendar } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface BeritaCardProps {
@@ -34,10 +35,12 @@ export function BeritaCard({
       {/* Image */}
       <div className="w-full aspect-[16/9] bg-[#d9d9d9] rounded-2xl md:rounded-[2rem] overflow-hidden mb-6 relative">
         {foto && (
-          <img
+          <Image
             src={foto}
             alt={headline}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         )}
       </div>

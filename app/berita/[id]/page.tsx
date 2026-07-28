@@ -2,6 +2,7 @@ import { supabase } from "@/lib/supabase";
 import { notFound } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 
 export const revalidate = 0;
@@ -56,11 +57,13 @@ export default async function BeritaDetail({
 
         {/* Photo */}
         {berita.foto && (
-          <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 rounded-[2rem] overflow-hidden mb-10">
-            <img
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 rounded-[2rem] overflow-hidden mb-10">
+            <Image
               src={berita.foto}
               alt={berita.headline}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover"
             />
           </div>
         )}

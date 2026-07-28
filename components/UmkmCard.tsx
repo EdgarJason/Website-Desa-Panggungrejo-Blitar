@@ -1,4 +1,5 @@
-import { User, Phone } from "lucide-react";
+import { MapPin, User, Phone } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 interface UmkmCardProps {
@@ -23,10 +24,12 @@ export function UmkmCard({
       {/* Image */}
       <div className="w-full aspect-[16/9] bg-[#d9d9d9] rounded-2xl md:rounded-[2rem] overflow-hidden mb-6 relative">
         {foto && (
-          <img
+          <Image
             src={foto}
             alt={nama}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         )}
       </div>
