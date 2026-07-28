@@ -14,7 +14,7 @@ export function WisataCard({
   mapUrl,
 }: WisataCardProps) {
   return (
-    <div className="flex flex-col w-full font-sans group">
+    <div className="flex flex-col h-full w-full font-sans group">
       {/* Image Placeholder / Image */}
       <div className="w-full aspect-[3/2] bg-[#d9d9d9] rounded-[2rem] overflow-hidden mb-6 relative">
         {imageUrl && (
@@ -32,28 +32,30 @@ export function WisataCard({
           {title}
         </h3>
 
-        <p className="text-[#3a3a3a] text-base leading-relaxed mb-8 font-medium flex-1">
+        <p className="text-[#3a3a3a] text-base leading-relaxed mb-8 font-medium">
           {description}
         </p>
 
-        {mapUrl ? (
-          <a href={mapUrl} target="_blank" rel="noopener noreferrer">
+        <div className="mt-auto w-full">
+          {mapUrl ? (
+            <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+              <Button 
+                size="lg"
+                className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              >
+                Lihat Lokasi
+              </Button>
+            </a>
+          ) : (
             <Button 
               size="lg"
-              className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              disabled
+              className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm opacity-50 cursor-not-allowed"
             >
-              Lihat Lokasi
+              Lokasi Belum Tersedia
             </Button>
-          </a>
-        ) : (
-          <Button 
-            size="lg"
-            disabled
-            className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm opacity-50 cursor-not-allowed"
-          >
-            Lokasi Belum Tersedia
-          </Button>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

@@ -52,28 +52,31 @@ export function UmkmCard({
           {deskripsi}
         </p>
 
-        {lokasi ? (
-          <a
-            href={lokasi}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="mt-auto w-full">
+          {lokasi ? (
+            <a
+              href={lokasi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
+            >
+              <Button
+                size="lg"
+                className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              >
+                Lihat Lokasi
+              </Button>
+            </a>
+          ) : (
             <Button
               size="lg"
-              className="w-full mt-auto rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm"
+              className="w-full rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm opacity-50 cursor-not-allowed"
+              disabled
             >
-              Lihat Lokasi
+              Lokasi Belum Tersedia
             </Button>
-          </a>
-        ) : (
-          <Button
-            size="lg"
-            className="w-full mt-auto rounded-full font-semibold transition-all hover:scale-[1.02] shadow-sm opacity-50 cursor-not-allowed"
-            disabled
-          >
-            Lokasi Belum Tersedia
-          </Button>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
