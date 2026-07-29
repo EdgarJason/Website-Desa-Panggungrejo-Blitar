@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Hanken_Grotesk, Almendra } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { LayoutShell } from "@/components/LayoutShell";
+
+const almendra = Almendra({
+  variable: "--font-almendra",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const hanken = Hanken_Grotesk({
   variable: "--font-sans",
@@ -20,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://desapanggungrejoblitar.vercel.app"),
+  metadataBase: new URL("https://desapanggungrejoblitar.site"),
   title: {
     default: "Desa Panggungrejo - Kab. Blitar",
     template: "%s | Desa Panggungrejo",
@@ -30,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Desa Panggungrejo - Kab. Blitar",
     description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur.",
-    url: "https://desapanggungrejoblitar.vercel.app",
+    url: "https://desapanggungrejoblitar.site",
     siteName: "Desa Panggungrejo",
     locale: "id_ID",
     type: "website",
@@ -59,7 +65,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", hanken.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", hanken.variable, almendra.variable)}
     >
       <body className="min-h-full flex flex-col">
         <LayoutShell>{children}</LayoutShell>

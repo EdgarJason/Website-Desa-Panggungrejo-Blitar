@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { supabase } from "@/lib/supabase";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://desapanggungrejoblitar.vercel.app";
+  const baseUrl = "https://desapanggungrejoblitar.site";
 
   // Get all berita to dynamically add to sitemap
   const { data: berita } = await supabase.from("berita").select("id, date");

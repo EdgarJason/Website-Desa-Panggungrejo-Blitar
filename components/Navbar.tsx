@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -41,16 +42,28 @@ export function Navbar() {
               : "bg-transparent text-white px-0 py-8"
           )}
         >
-          <div 
-            className={cn(
-              "flex flex-col z-50 transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] origin-left",
-              isScrolled || !isHome ? "scale-90 md:scale-95" : "scale-100"
-            )}
-          >
-            <Link href="/" className="font-bold text-lg md:text-xl tracking-wider leading-none">
-              PANGGUNGREJO
+          <div className="flex items-center gap-3 md:gap-4 z-50">
+            <Link href="/" className="shrink-0 transition-transform duration-300 hover:scale-105">
+              <Image 
+                src="/logo_desapanggungrejo.png" 
+                alt="Logo Desa Panggungrejo" 
+                width={48} 
+                height={48} 
+                draggable="false"
+                className="object-contain w-10 h-auto md:w-12"
+              />
             </Link>
-            <span className="text-xs font-normal mt-1 opacity-90">Kab. Blitar</span>
+            <div 
+              className={cn(
+                "flex flex-col transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] origin-left",
+                isScrolled || !isHome ? "scale-90 md:scale-95" : "scale-100"
+              )}
+            >
+              <Link href="/" className="font-bold text-lg md:text-xl tracking-wider leading-none font-almendra">
+                Desa Panggungrejo
+              </Link>
+              <span className="text-xs font-normal mt-1 opacity-90">Kab. Blitar</span>
+            </div>
           </div>
 
           {/* Desktop Nav */}

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin/"], // Prevent Google from indexing the admin dashboard
     },
-    sitemap: "https://desapanggungrejoblitar.vercel.app/sitemap.xml",
+    sitemap: "https://desapanggungrejoblitar.site/sitemap.xml",
   };
 }

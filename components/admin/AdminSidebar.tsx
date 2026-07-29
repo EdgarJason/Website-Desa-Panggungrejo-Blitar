@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -46,10 +47,21 @@ export function AdminSidebar({ onLogout }: { onLogout: () => void }) {
   return (
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-brand-dark flex flex-col text-white z-40">
       {/* Branding */}
-      <div className="px-6 py-8 border-b border-white/10">
-        <Link href="/admin/dashboard" className="block">
-          <h1 className="text-xl font-bold tracking-wider">PANGGUNGREJO</h1>
-          <p className="text-sm text-white/60 mt-0.5">Admin Panel</p>
+      <div className="px-5 py-7 border-b border-white/10">
+        <Link href="/admin/dashboard" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div className="shrink-0">
+            <Image 
+              src="/logo_desapanggungrejo.png" 
+              alt="Logo Desa Panggungrejo" 
+              width={48} 
+              height={48} 
+              className="object-contain w-11 h-11 drop-shadow-md"
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <h1 className="text-xl font-bold tracking-wide font-almendra leading-tight">Desa Panggungrejo</h1>
+            <p className="text-xs text-white/60 font-medium mt-0.5">Admin Panel</p>
+          </div>
         </Link>
       </div>
 

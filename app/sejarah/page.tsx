@@ -6,7 +6,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sejarah",
-  description: "Sejarah Desa Panggungrejo, dari legenda Mbah Gadung Melati hingga berdirinya desa pada tahun 1891.",
+  description:
+    "Sejarah Desa Panggungrejo, dari legenda Mbah Gadung Melati hingga berdirinya desa pada tahun 1891.",
 };
 
 export default function Sejarah() {
@@ -14,7 +15,10 @@ export default function Sejarah() {
     <main className="flex flex-col min-h-screen bg-white font-sans text-black w-full px-8 md:px-16 pt-40 pb-24 gap-10">
       <section className="flex flex-col gap-10 w-full max-w-7xl mx-auto">
         <div className="relative pl-12 md:pl-16">
-          <Link href="/#sejarah" className="absolute left-0 top-1 md:top-2 text-zinc-500 hover:text-black transition-colors shrink-0">
+          <Link
+            href="/#sejarah"
+            className="absolute left-0 top-1 md:top-2 text-zinc-500 hover:text-black transition-colors shrink-0"
+          >
             <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" />
           </Link>
           <h1 className="text-5xl lg:text-6xl font-bold">
@@ -32,80 +36,100 @@ export default function Sejarah() {
       </section>
 
       <p className="text-lg font-normal">
-        Sejarah Desa Panggungrejo sangat erat kaitannya dengan legenda Mbah
-        Gadung Melati. Desa ini bermula dari sebuah pedukuhan bernama Panggung
-        Dolok. Masyarakat setempat secara umum meyakini bahwa tokoh dalam cerita
-        tersebut adalah sosok cikal bakal yang membuka hutan dan membangun
-        kawasan ini menjadi Desa Panggungrejo.
+        Sejarah Desa Panggungrejo tidak terlepas dari Sejarah Legenda Mbah Nyai
+        Gadung Melati bersama suaminya Eyang Aryo Dipati. Desa ini awalnya dari
+        cerita padukuhan Panggung Dolok yang sekarang menjadi Desa Panggungrejo.
+        Yang secara umum masyarakat meyakini bahwa orang atau tokoh dalam cerita
+        tersebut merupakan orang pertama (cikal bakal) yang membuat hutan
+        menjadi Desa Panggungrejo.
         <br />
         <br />
-        <strong>Legenda Pangeran Prabu Gadung Melati</strong>
+        <strong>
+          Legenda Mbah Nyai Gadung Melati bersama Eyang Aryo Dipati
+        </strong>
         <br />
-        Kisah ini bermula pada akhir abad ke-18, tepatnya pascaperang Kesultanan
-        Mataram. Pada masa itu, terjadi perang besar di Tanah Jawa ketika
-        Pangeran Diponegoro berjuang melawan penjajah Belanda. Sayangnya,
-        peperangan tersebut akhirnya dimenangkan oleh pihak Belanda melalui
-        taktik licik mereka. Setelah kekalahan itu, banyak pengikut Pangeran
-        Diponegoro yang terpaksa melarikan diri dari kejaran tentara Belanda.
-        Mereka keluar dari wilayah Mataram untuk mencari tempat perlindungan
-        yang aman, sekaligus menyusun kembali kekuatan demi mengobarkan semangat
-        antipenjajahan di daerah lain.
-        <br />
-        <br />
-        Menurut cerita yang beredar, salah satu pengikut Pangeran Diponegoro
-        yang melarikan diri ke arah timur adalah Pangeran Gadung Melati. Beliau
-        juga dikenal sebagai kerabat Kerajaan Majapahit dan keturunan dari
-        Batoro Kathong. Perjalanannya membawa beliau ke tengah hutan di kawasan
-        Gunung Kendeng, terus berjalan hingga tiba di lereng bagian selatan. Di
-        sana beliau beristirahat dan merasa bahwa tempat tersebut sangat aman.
-        Beliau kemudian memutuskan untuk membangun sebuah rumah peristirahatan
-        yang terbuat dari kayu jati gelondongan utuh yang biasa disebut kayu
-        dolok. Proses pembuatan rumah ini dibantu oleh dua orang abdi setianya,
-        yaitu Mbah Jahet dan Mbah Sutol. Konon Mbah Sutol adalah sosok yang
-        memiliki keterbatasan fisik pada kakinya.
+        Pada akhir abad ke 18 terutama pasca perang Kesultanan Mataram, yaitu
+        perang besar ditanah jawa antara bangsawan Kesultanan Mataram bersama
+        pengikutnya yang dipimpin oleh Pangeran Diponegoro melawan penjajah
+        Belanda, yang akhirnya dimenangkan oleh Belanda dengan kelicikannya.
+        Setelah perang tersebut banyak pengikut Pangeran Diponegoro yang
+        melarikan diri dari kejaran tentara Belanda. Mereka lari keluar daerah
+        Mataram untuk mencari tempat yang aman guna menyusun kekuatan kembali
+        untuk mengobarkan semangat anti penjajahan di daerah lain.
         <br />
         <br />
-        Seiring berjalannya waktu, pengikut Pangeran Gadung Melati terus
-        bertambah. Rombongan kecil dari Mataram yang dipimpin oleh Mbah Karso
-        Drono juga datang dan menetap di hutan tersebut. Sedikit demi sedikit,
-        kawasan hutan mulai dibabat untuk dijadikan area perumahan dan ladang
-        pertanian sekitar tahun 1881. Karena hutan itu masih banyak dihuni oleh
-        harimau, rumah-rumah warga dibangun dengan model panggung untuk
-        menghindari serangan binatang buas. Ketika rumah panggung di kawasan
-        tersebut semakin banyak, wilayah ini akhirnya diberi nama Panggung
-        Dolok, yang berarti deretan rumah panggung dari kayu dolok.
+        Ada berbagai kisah tentang Mbah Nyai Gadung Melati, salah satunya adalah
+        yang ada di Desa Panggungrejo ini. Menurut beberapa nara sumber yang ada
+        di Desa Panggungrejo disebutkan bahwa salah satu cikal bakal Desa
+        Panggungrejo adalah Mbah Nyai Gadung Melati bersama suaminya Eyang Aryo
+        Dipati. Menurut ahli silsilah Kejawen, Nyai Gadung Melati merupakan
+        seorang tokoh yang paling banyak membabat atau membuka desa di daerah
+        Blitar termasuk salah satunya Desa Panggungrejo.
         <br />
         <br />
-        Beberapa tahun kemudian, Pangeran Gadung Melati beserta Mbah Jahet dan
-        Mbah Sutol wafat dan dimakamkan di pinggiran desa. Sebagai penghormatan
-        atas status bangsawannya, dibangunlah astana makam khusus yang hingga
-        kini sering dijadikan lokasi tradisi sadranan. Makam tersebut dikenal
-        dengan sebutan makam Mbah Danyang Aryo Dipati Pangeran Prabu Gadung
-        Melati. Sampai sekarang tempat ini masih dianggap keramat oleh
-        masyarakat setempat. Banyak orang yang memiliki hajat datang untuk
-        memanjatkan doa, memohon kelancaran dan keselamatan. Selain itu, makam
-        ini sering menjadi tempat berkumpul masyarakat setiap tahunnya untuk
-        memohon pertolongan kepada Tuhan Yang Maha Kuasa, terutama saat
-        menghadapi masa sulit seperti kemarau panjang di awal musim penghujan.
+        Konon ceritanya, Mbah Nyai Gadung Melati bersama suaminya Eyang Aryo
+        Dipati bersama ini adalah salah satu pengikut Pangeran Diponegoro dari
+        Kerajaan Mataram. Usai Perang Diponegoro beliau melarikan diri ke arah
+        timur hingga sampailah beliau ditengah hutan pegunungan kendeng dan
+        beliau berjalan terus ke lereng selatan Gunung Kendeng.
         <br />
         <br />
-        Tahun-tahun berlalu dan penduduk di kawasan tersebut semakin padat,
-        tetapi mereka belum memiliki struktur pemerintahan desa yang resmi.
-        Akhirnya pada tahun 1891, dibentuklah Desa Panggung Dolok secara resmi
-        yang dipimpin oleh lurah pertama bernama Djontono, dengan masa jabatan
-        dari tahun 1891 hingga 1901. Karena desa ini terus berkembang dan
-        semakin ramai dari tahun ke tahun, Lurah Djontono kemudian memutuskan
-        untuk mengubah nama Desa Panggung Dolok menjadi Desa Panggungrejo.
+        Di Pegunungan Kendeng inilah beliau beristirahat bersama para
+        pengikutnya. Setelah dirasa tempat peristirahatannya aman maka beliau
+        memutuskan untuk membuat tempat peristirahatan rumah yang dibuat dari
+        kayu jati gelondongan / bulat yang disebut kayu dolog.
         <br />
         <br />
-        Nama Panggungrejo sendiri memiliki makna filosofis yang mendalam. Kata
-        "Panggung" berarti daerah yang tinggi, sedangkan "Rejo" bermakna ramai.
-        Perubahan nama ini menyematkan harapan bahwa meskipun terletak di
-        dataran tinggi pegunungan, desa ini akan selalu menjadi tempat yang
-        makmur dan sejahtera bagi penduduknya.{" "}
+        Disebutkan pula bahwa diantara pengikut Nyai Gadung Melati bersama
+        suaminya Eyang Aryo Dipati ada yang bernama Mbah Jahet dan Mbah Sutol.
+        Dari hari kehari jumlah pengikut Nyai Gadung Melati dan suaminya Eyang
+        Aryo Dipati terus bertambah. Setelah berhasil membuka hutan di kawasan
+        Pegunungan Kendeng ini, datanglah rombongan berikutnya yang juga
+        merupakan pengikut Pangeran Diponegoro yang berjumlah dari 10 orang yang
+        diketuai oleh Mbah Djontono yang datang dari Mataram dan kesemuanya
+        bertempat tinggal di hutan tersebut. Sedikit demi sedikit hutan dibabat
+        dijadikan perumahan dan ladang pertanian sekitar tahun 1881.
+        <br />
+        <br />
+        Mengingat dihutan tersebut banyak dihuni oleh harimau, sehingga gubuk /
+        perumahan tersebut dibuat bentuk panggung untuk menghindari serangan
+        binatang buas. Setelah rumah - rumah dari panggung tersebut semakin
+        banyak maka wilayah itu diberi nama Panggung Dolok yang artinya rumah
+        yang berbentuk panggung yang terbuat dari kayu Dolok (atau bisa disebut
+        kayu bulat)
+        <br />
+        <br />
+        Beberapa tahun kemudian Nyai Gadung Melati bersama suaminya Eyang Aryo
+        Dipati dikabarkan telah meninggal. Oleh orang-orang sekitar,
+        pesanggrahan atau persinggahan mereka dijadikan sebagai sadranan dengan
+        sebutan Danyang Gadung Melati. Sampai saat ini punden tersebut oleh
+        banyak orang masih dikeramatkan, karena setiap orang yang mempunyai
+        hajat biasanya meminta do'a restu kepada Danyang Gadung Melati dengan
+        harapan hajatnya berjalan dengan lancar dan selamat. Selain itu setiap
+        tahun juga digunakan oleh banyak orang berkumpul bersama-sama ditempat
+        itu guna memohon kepada Tuhan Yang Maha Kuasa bila mana terjadi
+        kesulitan - kesulitan misalnya pada saat sulitnya turun hujan diwaktu
+        permulaan musim penghujan.
+        <br />
+        <br />
+        Tahun terus berjalan dan penghuni tempat tersebut makin banyak namun
+        belum membentuk suatu wilayah (Desa) maka untuk itu pada tahun 1891
+        dibentuk suatu desa dengan nama Panggung Dolok, dan untuk pertama
+        kalinya dipimpin oleh lurah yang bernama Djontono (Lurah yang pertama)
+        mulai tahun 1891 - 1901. Karena dari tahun ketahun desa tersebut semakin
+        ramai maka nama Desa Panggung Dolok oleh Ki Lurah Djontono diubah
+        menjadi Desa Panggungrejo, yang artinya Panggung = daerah tinggi dan
+        Rejo = ramai, dengan harapan nantinya Desa Panggungrejo walaupun
+        terletak di dataran tinggi (Pegunungan) tetapi tetap ramai.
+        <br />
+        <br />
+        Demikian Sejarah singkat berdirinya ( terjadinya ) Desa Panggungrejo.
       </p>
 
-      <a href="/#sejarah" className={buttonVariants({ variant: "default", size: "lg" })}>
+      <a
+        href="/#sejarah"
+        className={buttonVariants({ variant: "default", size: "lg" })}
+      >
         Kembali ke Beranda
       </a>
     </main>

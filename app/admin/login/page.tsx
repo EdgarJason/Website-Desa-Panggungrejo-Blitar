@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { loginAction } from "./actions";
 
+
 export default function AdminLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -37,12 +38,13 @@ export default function AdminLoginPage() {
   };
 
   return (
+    
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-light via-white to-brand-light-hover px-4">
       <div className="w-full max-w-md">
         {/* Branding */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-brand-dark tracking-wider">
-            PANGGUNGREJO
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-dark tracking-wide font-almendra whitespace-nowrap">
+            Desa Panggungrejo
           </h1>
           <p className="text-brand-normal mt-1 font-medium">
             Kab. Blitar
@@ -56,7 +58,7 @@ export default function AdminLoginPage() {
               Login Admin
             </h2>
             <p className="text-gray-500 mt-1 text-sm">
-              Masukkan email dan password untuk mengakses panel admin.
+              Masukkan username dan password untuk mengakses panel admin.
             </p>
           </div>
 
@@ -77,7 +79,7 @@ export default function AdminLoginPage() {
                 htmlFor="email"
                 className="block text-sm font-semibold text-gray-700"
               >
-                Email
+                Username
               </label>
               <input
                 id="email"
