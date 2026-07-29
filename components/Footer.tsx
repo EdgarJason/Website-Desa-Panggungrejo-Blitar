@@ -30,7 +30,7 @@ export function Footer() {
         {/* Left Side */}
         <div className="flex flex-col justify-between">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-wider mb-2">PANGGUNGREJO</h2>
+            <h2 className="text-4xl md:text-5xl tracking-wider mb-2 font-berkshire">Desa Panggungrejo</h2>
             <p className="text-xl md:text-2xl text-white/80">Kab. Blitar</p>
           </div>
           
