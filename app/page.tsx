@@ -63,7 +63,7 @@ export default async function Home() {
             <div className="md:w-5/12 flex flex-row items-center gap-4 md:gap-5">
               <Image 
                 src="/logo_desapanggungrejo.png" 
-                alt="Logo Desa Panggungrejo" 
+                alt="Logo Desa Panggungrejo Blitar" 
                 width={80} 
                 height={80} 
                 className="object-contain w-16 h-16 md:w-20 md:h-20 drop-shadow-sm shrink-0"
@@ -158,7 +158,7 @@ export default async function Home() {
             <Image
               priority
               src="/fotosejarah.png"
-              alt="Foto Kantor Desa Panggungrejo"
+              alt="Foto Punden Desa Panggungrejo Blitar"
               width={1200}
               height={800}
               draggable={false}

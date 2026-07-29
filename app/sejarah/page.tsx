@@ -27,7 +27,7 @@ export default function Sejarah() {
         </div>
         <Image
           src="/fotosejarah.png"
-          alt="Foto Kantor Desa Panggungrejo"
+          alt="Foto Punden Desa Panggungrejo Blitar"
           width={1200}
           height={800}
           draggable={false}
