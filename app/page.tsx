@@ -156,7 +156,6 @@ export default async function Home() {
               Sejarah Desa Panggungrejo
             </h1>
             <Image
-              priority
               src="/fotosejarah.png"
               alt="Foto Punden Desa Panggungrejo Blitar"
               width={1200}
