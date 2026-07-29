@@ -39,6 +39,7 @@ export function BeritaCard({
             src={foto}
             alt={headline}
             fill
+            draggable="false"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
