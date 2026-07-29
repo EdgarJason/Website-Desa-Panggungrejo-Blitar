@@ -144,7 +144,7 @@ export default async function Home() {
               </svg>
             </div>
 
-            <p className="absolute bottom-6 font-medium text-gray-400 z-10">
+            <p className="absolute bottom-6 font-medium text-gray-500 z-10">
               Video Placeholder
             </p>
           </div>
@@ -152,9 +152,9 @@ export default async function Home() {
 
         <section id="sejarah" className="flex flex-col gap-10">
           <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Sejarah Desa Panggungrejo
-            </h1>
+            </h2>
             <Image
               src="/fotosejarah.png"
               alt="Foto Punden Desa Panggungrejo Blitar"
@@ -185,9 +185,9 @@ export default async function Home() {
         </section>
 
         <section id="wisata" className="flex flex-col gap-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Wisata Unggulan Desa Panggungrejo
-          </h1>
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
             <WisataCard
@@ -208,9 +208,9 @@ export default async function Home() {
         <section id="umkm" className="flex flex-col gap-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 w-full">
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 UMKM Desa Panggungrejo
-              </h1>
+              </h2>
               <p className="text-lg font-normal text-zinc-700 max-w-2xl">
                 UMKM yang menjadi tulang punggung ekonomi Desa Panggungrejo dan
                 menyediakan kebutuhan masyarakat.
@@ -245,9 +245,9 @@ export default async function Home() {
         <section id="berita" className="flex flex-col gap-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 w-full">
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Kegiatan Desa Panggungrejo
-              </h1>
+              </h2>
               <p className="text-lg font-normal text-zinc-700 max-w-2xl">
                 Informasi terkini mengenai kegiatan dan acara yang diadakan di
                 Desa Panggungrejo.
@@ -281,9 +281,9 @@ export default async function Home() {
 
         <section id="peta" className="flex flex-col gap-10 w-full">
           <div className="flex flex-col gap-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Peta Lokasi Desa Panggungrejo
-            </h1>
+            </h2>
             <p className="text-lg font-normal text-zinc-700 max-w-full">
               Jelajahi Desa Panggungrejo secara interaktif. Anda dapat menggeser, memperbesar, atau klik rute untuk melihat detail navigasi.
             </p>

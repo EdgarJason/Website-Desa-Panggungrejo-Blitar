@@ -43,7 +43,7 @@ export function Navbar() {
           )}
         >
           <div className="flex items-center gap-3 md:gap-4 z-50">
-            <Link href="/" className="shrink-0 transition-transform duration-300 hover:scale-105">
+            <Link href="/" aria-label="Beranda" className="shrink-0 transition-transform duration-300 hover:scale-105">
               <Image 
                 src="/logo_desapanggungrejo.png" 
                 alt="Logo Desa Panggungrejo" 
@@ -95,6 +95,7 @@ export function Navbar() {
           {/* Mobile Menu Toggle */}
           <div className="md:hidden z-50 flex items-center">
             <button 
+              aria-label="Menu Navigasi"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 -mr-2 text-current hover:opacity-70 transition-opacity"
             >

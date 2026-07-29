@@ -47,16 +47,16 @@ export function Footer() {
           <div className="flex flex-col gap-4 items-start md:items-end">
             <h3 className="text-xl font-semibold">Kontak</h3>
             <div className="flex gap-4">
-              <Link href="#" className="hover:text-white/80 transition-colors">
+              <Link href="#" aria-label="Instagram" className="hover:text-white/80 transition-colors">
                 <InstagramIcon className="w-6 h-6" />
               </Link>
-              <Link href="#" className="hover:text-white/80 transition-colors">
+              <Link href="#" aria-label="Facebook" className="hover:text-white/80 transition-colors">
                 <FacebookIcon className="w-6 h-6" />
               </Link>
-              <Link href="#" className="hover:text-white/80 transition-colors">
+              <Link href="#" aria-label="Telepon" className="hover:text-white/80 transition-colors">
                 <Phone className="w-6 h-6" />
               </Link>
-              <Link href="#" className="hover:text-white/80 transition-colors">
+              <Link href="#" aria-label="Youtube" className="hover:text-white/80 transition-colors">
                 <YoutubeIcon className="w-6 h-6" />
               </Link>
             </div>
