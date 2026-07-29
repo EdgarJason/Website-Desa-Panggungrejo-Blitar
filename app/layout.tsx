@@ -55,6 +55,9 @@ export const metadata: Metadata = {
     description: "Website resmi Desa Panggungrejo, Kecamatan Panggungrejo, Kabupaten Blitar, Jawa Timur.",
     images: ["/herothumbnail.png"],
   },
+  verification: {
+    google: "yuzPJi65hn8e-1laKxaJIAd_BpedSP34LNnnAtxej1M",
+  },
 };
 
 export default function RootLayout({
