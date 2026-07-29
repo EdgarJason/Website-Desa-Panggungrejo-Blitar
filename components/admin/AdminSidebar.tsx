@@ -59,7 +59,7 @@ export function AdminSidebar({ onLogout }: { onLogout: () => void }) {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h1 className="text-xl font-bold tracking-wide font-almendra leading-tight">Desa Panggungrejo</h1>
+            <h1 className="text-xl font-normal tracking-wide font-berkshire leading-tight">Desa Panggungrejo</h1>
             <p className="text-xs text-white/60 font-medium mt-0.5">Admin Panel</p>
           </div>
         </Link>

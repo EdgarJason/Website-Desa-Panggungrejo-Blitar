@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md">
         {/* Branding */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-dark tracking-wide font-almendra whitespace-nowrap">
+          <h1 className="text-4xl md:text-5xl font-normal text-brand-dark tracking-wide font-berkshire whitespace-nowrap">
             Desa Panggungrejo
           </h1>
           <p className="text-brand-normal mt-1 font-medium">

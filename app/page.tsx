@@ -43,7 +43,7 @@ export default async function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
 
         <div className="relative text-left max-w-5xl z-20 px-6 md:px-16 pb-16 md:pb-24 text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg font-almendra">
+          <h1 className="text-5xl md:text-7xl mb-4 drop-shadow-lg font-berkshire">
             Desa Panggungrejo
           </h1>
           <p className="font-normal text-sm md:text-lg mb-6 drop-shadow-md text-zinc-100">

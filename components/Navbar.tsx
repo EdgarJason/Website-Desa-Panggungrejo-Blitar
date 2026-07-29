@@ -59,7 +59,7 @@ export function Navbar() {
                 isScrolled || !isHome ? "scale-90 md:scale-95" : "scale-100"
               )}
             >
-              <Link href="/" className="font-bold text-lg md:text-xl tracking-wider leading-none font-almendra">
+              <Link href="/" className="font-normal text-lg md:text-xl tracking-wider leading-none font-berkshire">
                 Desa Panggungrejo
               </Link>
               <span className="text-xs font-normal mt-1 opacity-90">Kab. Blitar</span>

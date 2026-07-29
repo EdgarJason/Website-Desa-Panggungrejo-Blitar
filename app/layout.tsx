@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hanken_Grotesk, Almendra } from "next/font/google";
+import { Geist, Geist_Mono, Hanken_Grotesk, Berkshire_Swash } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { LayoutShell } from "@/components/LayoutShell";
 
-const almendra = Almendra({
-  variable: "--font-almendra",
+const berkshire = Berkshire_Swash({
+  variable: "--font-berkshire",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 const hanken = Hanken_Grotesk({
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", hanken.variable, almendra.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", hanken.variable, berkshire.variable)}
     >
       <body className="min-h-full flex flex-col">
         <LayoutShell>{children}</LayoutShell>
