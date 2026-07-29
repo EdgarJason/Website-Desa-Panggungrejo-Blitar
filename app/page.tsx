@@ -107,9 +107,9 @@ export default async function Home() {
           Desa Panggungrejo memiliki sejarah yang erat dengan legenda Pangeran Prabu Gadung Melati, tokoh yang dipercaya membuka kawasan hutan di lereng Gunung Kendeng menjadi permukiman dan lahan pertanian pada akhir abad ke-19. Karena wilayah tersebut masih dihuni banyak satwa liar, masyarakat membangun rumah-rumah berbentuk panggung dari kayu gelondongan (dolok), sehingga kawasan ini dikenal sebagai Panggung Dolok. Pada tahun 1891, desa resmi dibentuk dan kemudian berganti nama menjadi Panggungrejo, yang berarti daerah dataran tinggi yang ramai dan makmur. Hingga kini, kisah serta makam Pangeran Prabu Gadung Melati tetap menjadi bagian penting dari identitas budaya dan sejarah Desa Panggungrejo.
         </p>
 
-          <a href="/sejarah" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
+          <Link href="/sejarah" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
             Lihat lebih lengkap mengenai sejarah Desa Panggungrejo →
-          </a>
+          </Link>
 
          </section>
 
@@ -148,9 +148,9 @@ export default async function Home() {
         <LandingUmkmGrid data={umkmData} />
 
         <div className="flex justify-center">
-          <a href="/umkm" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
+          <Link href="/umkm" className="text-lg font-medium underline underline-offset-4 hover:text-brand-normal transition-colors cursor-pointer">
             Lihat Selengkapnya →
-          </a>
+          </Link>
         </div>
       </section>
 
