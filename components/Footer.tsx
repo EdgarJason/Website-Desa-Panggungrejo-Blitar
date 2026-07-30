@@ -65,7 +65,7 @@ export function Footer() {
           {/* Navigasi Section */}
           <div className="flex flex-col gap-4 items-start md:items-end">
             <h3 className="text-xl font-semibold">Navigasi</h3>
-            <nav className="flex flex-wrap gap-4 md:gap-6 font-regular">
+            <nav className="flex flex-wrap gap-4 md:gap-4 lg:gap-6 font-regular md:justify-end">
               <Link href="/#hero" className="hover:text-white/80 transition-colors">Home</Link>
               <Link href="/#tentang" className="hover:text-white/80 transition-colors">Tentang</Link>
               <Link href="/#sejarah" className="hover:text-white/80 transition-colors">Sejarah</Link>
@@ -74,7 +74,7 @@ export function Footer() {
               <Link href="/#berita" className="hover:text-white/80 transition-colors">Berita</Link>
               <Link href="#kontak" className="hover:text-white/80 transition-colors">Kontak</Link>
             </nav>
-            <Link href="/admin/berita" target="_blank" rel="noopener noreferrer" className="hidden md:block text-xs font-normal opacity-50 hover:opacity-100 underline transition-opacity mt-4">
+            <Link href="/admin/berita" target="_blank" rel="noopener noreferrer" className="hidden lg:block text-xs font-normal opacity-50 hover:opacity-100 underline transition-opacity mt-4">
               Akses Admin
             </Link>
           </div>
