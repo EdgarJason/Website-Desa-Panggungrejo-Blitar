@@ -127,26 +127,21 @@ export default async function Home() {
           <FilosofiLogo />
         </section>
 
-        <section className="flex flex-col w-full gap-5">
+        <section className="flex flex-col items-center w-full gap-5">
           <p className="text-base font-bold text-brand-normal uppercase tracking-widest text-center">
             Profile Desa Panggungrejo, Kab. Blitar
           </p>
-          <div className="w-full aspect-video bg-gray-100 rounded-2xl md:rounded-[2rem] border border-gray-200 flex items-center justify-center shadow-sm relative overflow-hidden group cursor-pointer">
-            <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors" />
-
-            <div className="w-20 h-20 bg-white/90 backdrop-blur rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform z-10">
-              <svg
-                className="w-8 h-8 text-brand-normal ml-1"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-
-            <p className="absolute bottom-6 font-medium text-gray-500 z-10">
-              Video Placeholder
-            </p>
+          <div className="w-full max-w-4xl aspect-video rounded-2xl md:rounded-[2rem] overflow-hidden shadow-sm border border-gray-200">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Fqqs-gHkl6U"
+              title="Profile Desa Panggungrejo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
         </section>
 
