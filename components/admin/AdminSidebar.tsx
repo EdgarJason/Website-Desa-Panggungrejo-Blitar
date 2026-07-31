@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface SidebarLink {
@@ -43,6 +44,12 @@ const links: SidebarLink[] = [
 
 export function AdminSidebar({ onLogout }: { onLogout: () => void }) {
   const pathname = usePathname();
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+  const handleLogout = async () => {
+    setIsLoggingOut(true);
+    await onLogout();
+  };
 
   return (
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-brand-dark flex flex-col text-white z-40">
@@ -90,13 +97,23 @@ export function AdminSidebar({ onLogout }: { onLogout: () => void }) {
       {/* Footer / Logout */}
       <div className="px-3 py-4 border-t border-white/10">
         <button
-          onClick={onLogout}
-          className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-medium text-white/70 hover:bg-red-500/15 hover:text-red-300 transition-all duration-200 cursor-pointer"
+          onClick={handleLogout}
+          disabled={isLoggingOut}
+          className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-medium text-white/70 hover:bg-red-500/15 hover:text-red-300 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
-          Logout
+          {isLoggingOut ? (
+            <>
+              <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              Keluar...
+            </>
+          ) : (
+            <>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+              Logout
+            </>
+          )}
         </button>
       </div>
     </aside>
