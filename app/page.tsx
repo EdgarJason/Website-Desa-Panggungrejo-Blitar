@@ -155,10 +155,11 @@ export default async function Home() {
               alt="Foto Punden Desa Panggungrejo Blitar"
               width={1200}
               height={800}
-              draggable={false}
+              draggable={false} 
               className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl md:rounded-[2rem] shadow-sm"
             />
           </div>
+          
 
           <p className="text-lg font-normal">
             Desa Panggungrejo berawal dari kisah pembukaan hutan di lereng
